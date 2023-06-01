@@ -7,7 +7,10 @@ python -m streamlit hello
 
 When rendered, it will appear as:
 
-Run the following command in your command prompt or terminal:
+```
+To install the required packages listed in the `requirements.txt` file, use the following command:
 
-```bash
-python -m streamlit hello
+```shell
+pip install -r requirements.txt
+```
+
