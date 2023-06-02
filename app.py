@@ -4,6 +4,10 @@ import numpy as np
 from streamlit_option_menu import option_menu
 import tensorflow as tf
 from sklearn.metrics import confusion_matrix
+import streamlit as st
+from PIL import Image
+import tensorflow as tf
+from tensorflow import keras
 
 st.title('Sickle Cell detection')
 
@@ -13,16 +17,5 @@ with st.sidebar:
     selected = option_menu(
         menu_title = "Main Menu", #Required
         options = ["Home","Projects ", "Contact"],
-
+    
     )
-
-
-# Load the model
-try:
-    model = tf.keras.models.load_model('model.h5')
-    st.write("Model loaded successfully!")
-except:
-    st.write("Failed to load the model!")
-
-
-
