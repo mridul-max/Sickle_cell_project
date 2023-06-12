@@ -49,6 +49,7 @@ def show_home_page():
 
         st.bar_chart(data.set_index('Class'))
 
+
         return class_label, percentage_predictions, image_label
 
     uploaded_files = st.file_uploader('Upload multiple images', type=['jpg', 'jpeg', 'png'], accept_multiple_files=True)
@@ -75,6 +76,7 @@ def show_home_page():
                 st.write('---')
 
             if all_percentage_predictions:
+                st.write('Calculating the average prediction')
                 average_prediction = np.mean(all_percentage_predictions, axis=0)
                 max_index = np.argmax(average_prediction)
                 predicted_phase = get_class_label(max_index)
